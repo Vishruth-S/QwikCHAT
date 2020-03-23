@@ -1,0 +1,74 @@
+<!-- ASSIGNMENT DONE AS PART OF GSOC PROPOSAL FOR CIRCUITVERSE  -->
+<!-- DONE BY VISHRUTH SUBRAMANIAN -->
+
+<!-- STYLED VERSION  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Hotkeys</title>
+    <link rel="stylesheet" href="hotkey33.css">
+</head>
+
+<body>
+    <h2>Set Custom hotkeys</h2>
+<div class = "content">
+    <h3>Add your combination for<span id="undo"> UNDO </span></h3>
+
+    <div class="box">
+        <ul>
+           <li>
+              <input type="radio" id="s-option" name="command" value="shiftKey" checked>
+              <label for="s-option">SHIFT</label>
+              <div class="check"></div>
+           </li>
+           <li>
+              <input type="radio" id="d-option" name="command" value="ctrlKey">
+              <label for="d-option">CTRL</label>
+              <div class="check"><div class="inside"></div></div>
+           </li>
+           <li>
+              <input type="radio" id="o-option" name="command" value="altKey">
+              <label for="o-option">ALT</label>
+              <div class="check"><div class="inside"></div></div>
+           </li>
+        </ul>
+     </div>
+
+        <br>
+        <input type="text" id="text1" placeholder="Enter letter">
+        <button onclick="fn_undo()" id = "btn1">SAVE</button>
+        <a href="file:///C:/Users/admin/VSCODE_progs/hotkey33.html"><button id="btn2">RESET</button></a>
+        <br>
+        <p>Note: Using custom hotkeys will override any default hotkeys set by your browser.</p>
+</div> 
+</body>
+
+<script>
+function fn_undo()
+{
+    
+    var command = document.querySelector('input[name="command"]:checked').value;
+    let key=document.querySelector('input[type="text"]').value;
+    let key1 = key.toUpperCase();
+    var keypressed = key1.charCodeAt(0);
+
+    alert("your combination of " + command + " + " + key1 + "  is saved");
+    alert("Try pressing the combination to test if it works");
+    
+    document.addEventListener('keydown', logKey);
+    
+    function logKey(e) {
+        e.preventDefault();
+        if (e.keyCode == keypressed && e[command]) 
+             alert(` ${command} + ${String.fromCharCode(e.keyCode)} pressed`);
+        
+    }
+}
+</script>
+
+
+</html>
