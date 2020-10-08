@@ -1,3 +1,3 @@
 # Custom_Hotkeys
 
-Custom hotkeys done as implementation (private)
+Custom hotkeys done as implementation (private). Simply simple
