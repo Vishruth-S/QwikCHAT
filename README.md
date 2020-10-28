@@ -1,3 +1,3 @@
-# Custom_Hotkeys
+# Chat App
 
-Custom hotkeys done as implementation 
+A chat application
