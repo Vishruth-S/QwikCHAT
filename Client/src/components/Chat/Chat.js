@@ -6,6 +6,7 @@ import './Chat.css'
 import Infobar from '../Infobar/Infobar';
 import Input from '../Input/Input';
 import Messages from '../Messages/Messages'
+import UsersInRoom from '../UsersInRoom/UsersInRoom';
 
 
 let socket;
@@ -32,12 +33,7 @@ const Chat = ({ location }) => {
                 socket.off()
                 return alert(error)
             }
-            // console.log(name, room)
         })
-        // return () => {
-        //     socket.emit('disconnect')
-        //     socket.off()
-        // }
     }, [ENDPOINT, location.search])
 
     useEffect(() => {
@@ -55,16 +51,15 @@ const Chat = ({ location }) => {
             socket.emit('sendMessage', message, () => setMessage(''))
         }
     }
-    // console.log(users)
 
     return (
         <div className="outerContainer">
-            {console.log(users)}
             <div className="container">
                 <Infobar room={room} />
                 <Messages messages={messages} name={name} />
                 <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
             </div>
+            <UsersInRoom users={users} />
         </div>
     )
 
