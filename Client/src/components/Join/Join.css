@@ -22,7 +22,7 @@ html, body {
 
 .welcomeContainer {
     color: #fff;
-    margin-top: 180px;
+    margin-top: 80px;
 }
 
 .joinInnerContainer {
@@ -39,7 +39,10 @@ html, body {
 .welcome {
     font-size: 45px;
     padding-top: 50px;
-    margin-bottom: -40px;
+}
+
+.welcome-image {
+    width: 300px;
 }
 
 .heading {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Image from '../../Assets/chatDark.png'
 import './Join.css'
 
 const Join = () => {
@@ -10,8 +11,9 @@ const Join = () => {
         <div>
             <div className="joinOuterContainer">
                 <div className="welcomeContainer">
-                    <text className="welcome">Welcome to <span style={{ color: "#a329ff" }}>Qwik</span>Chat</text>
+                    <h2 className="welcome">Welcome to <span style={{ color: "#a329ff" }}>Qwik</span>Chat</h2>
                     <p>A simple chat application</p>
+                    <img className="welcome-image" src={Image} alt="chat"></img>
                 </div>
                 <div className="joinInnerContainer">
                     <h1 className="heading">Join a chat room</h1>
