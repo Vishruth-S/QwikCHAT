@@ -7,7 +7,7 @@ import Infobar from '../Infobar/Infobar';
 import Input from '../Input/Input';
 import Messages from '../Messages/Messages'
 import UsersInRoom from '../UsersInRoom/UsersInRoom';
-import Navbar from '../Navbar/Navbar';
+
 
 
 let socket;
@@ -55,7 +55,6 @@ const Chat = ({ location }) => {
 
     return (
         <div>
-            <Navbar />
             <div className="outerContainer">
                 <div className="container">
                     <Infobar room={room} />

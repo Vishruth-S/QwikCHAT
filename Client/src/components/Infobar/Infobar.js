@@ -1,7 +1,7 @@
 import React from 'react'
 
-import closeIcon from '../../icons/closeIcon.png'
-import onlineIcon from '../../icons/onlineIcon.png'
+import closeIcon from '../../Assets/icons/closeIcon.png'
+import onlineIcon from '../../Assets/icons/onlineIcon.png'
 import './Infobar.css'
 
 const Infobar = ({ room }) => {

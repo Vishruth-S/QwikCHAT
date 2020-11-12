@@ -14,15 +14,20 @@ html, body {
 
 .joinOuterContainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
-    height: 100vh;
-    align-items: center;
+    height: 90vh;
     background-color: #1A1A1D;
+}
+
+.welcomeContainer {
+    color: #fff;
+    margin-top: 180px;
 }
 
 .joinInnerContainer {
     width: 20%;
+    align-self: center;
 }
 
 .joinInput {
@@ -31,9 +36,15 @@ html, body {
     width: 100%;
 }
 
+.welcome {
+    font-size: 45px;
+    padding-top: 50px;
+    margin-bottom: -40px;
+}
+
 .heading {
     color: white;
-    font-size: 2.5em;
+    font-size: 2em;
     padding-bottom: 10px;
     border-bottom: 2px solid white;
 }

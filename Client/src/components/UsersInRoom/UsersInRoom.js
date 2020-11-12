@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './UsersInRoom.css'
-import onlineIcon from '../../icons/onlineIcon.png'
+import onlineIcon from '../../Assets/icons/onlineIcon.png'
 
 function UsersInRoom({ users }) {
     let usersArr = Array.from(users)
