@@ -12,7 +12,7 @@ const App = () => {
       <button id="mode-toggle" onClick={() => setMode(mode === "dark" ? "light" : "dark")}>Mode</button>
       <Navbar theme={mode} />
       <Route path="/" exact component={() => <Join theme={mode} />} />
-      <Route path="/chat" component={() => <Chat theme={mode} />} />
+      <Route path="/chat" render={(routeParams) => <Chat routeParams={routeParams} theme={mode} />} />
     </Router>
   )
 }
