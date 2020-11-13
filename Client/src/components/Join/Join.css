@@ -12,16 +12,24 @@ html, body {
     box-sizing: border-box;
 }
 
+.dark {
+    background-color: #1A1A1D;
+    color: #fff;
+}
+
+.light {
+    background-color: #fff;
+    color: black;
+}
+
 .joinOuterContainer {
     display: flex;
     justify-content: space-around;
     text-align: center;
     height: 90vh;
-    background-color: #1A1A1D;
 }
 
 .welcomeContainer {
-    color: #fff;
     margin-top: 80px;
 }
 
@@ -46,18 +54,20 @@ html, body {
 }
 
 .heading {
-    color: white;
     font-size: 2em;
     padding-bottom: 10px;
+    border-bottom: 2px solid black;
+}
+
+.heading-dark {
     border-bottom: 2px solid white;
 }
 
 .button {
-    color: #fff !important;
+    color: white;
     text-transform: uppercase;
     text-decoration: none;
     background: #a329ff;
-    ;
     padding: 20px;
     border-radius: 5px;
     display: inline-block;
