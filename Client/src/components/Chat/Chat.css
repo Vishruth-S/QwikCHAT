@@ -3,17 +3,44 @@
     justify-content: center;
     align-items: center;
     height: 90vh;
+    transition: 0.3s;
+}
+
+.outerContainer-dark {
     background-color: #1A1A1D;
+    color: #FFFFFF;
+}
+
+.outerContainer-light {
+    background-color: #FFFFFF;
+    color: #000;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: #FFFFFF;
     border-radius: 8px;
-    /* height: 60%; */
     width: 35%;
+    transition: 0.3s;
+}
+
+.container-light {
+    background-color: #efefef;
+    border: 1px solid black;
+}
+
+.container-dark {
+    background: #0d0c20;
+    border: none;
+}
+
+.container-dark>div:nth-child(2)>button {
+    background-color: #6633a3;
+}
+
+.container-light>div:nth-child(2)>button {
+    background-color: #bcbaba;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
