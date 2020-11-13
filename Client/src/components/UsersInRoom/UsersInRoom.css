@@ -1,6 +1,14 @@
 .users-room {
     align-self: start;
-    color: white;
     margin-top: 5%;
     margin-left: 20px;
+    transition: 0.3s;
+}
+
+.users-room-dark {
+    color: white;
+}
+
+.users-room-light {
+    color: black;
 }

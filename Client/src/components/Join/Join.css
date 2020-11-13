@@ -15,11 +15,13 @@ html, body {
 .dark {
     background-color: #1A1A1D;
     color: #fff;
+    transition: 0.3s;
 }
 
 .light {
     background-color: #fff;
     color: black;
+    transition: 0.3s;
 }
 
 .joinOuterContainer {

@@ -1,11 +1,11 @@
 import React from 'react'
 import './Input.css'
 
-const Input = ({ message, setMessage, sendMessage }) => {
+const Input = ({ message, setMessage, sendMessage, theme }) => {
     return (
         <form className="form">
             <input
-                className="input"
+                className={`input input-${theme}`}
                 type="text"
                 placeholder="Type a message..."
                 value={message}

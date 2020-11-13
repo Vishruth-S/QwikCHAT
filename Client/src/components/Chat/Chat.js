@@ -12,7 +12,8 @@ import UsersInRoom from '../UsersInRoom/UsersInRoom';
 
 let socket;
 
-const Chat = ({ location }) => {
+const Chat = (props) => {
+    const location = props.routeParams.location
     const [name, setName] = useState('')
     const [room, setRoom] = useState('')
     const [users, setUsers] = useState('')
@@ -55,16 +56,17 @@ const Chat = ({ location }) => {
 
     return (
         <div>
-            <div className="outerContainer">
-                <div className="container">
+            <div className={`outerContainer outerContainer-${props.theme}`}>
+                <div className={`container container-${props.theme}`}>
                     <Infobar room={room} />
                     <Messages messages={messages} name={name} />
-                    <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
+                    <Input message={message} setMessage={setMessage} sendMessage={sendMessage} theme={props.theme} />
                 </div>
-                <UsersInRoom users={users} />
+                <UsersInRoom users={users} theme={props.theme} />
             </div>
         </div>
     )
+
 
 }
 

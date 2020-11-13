@@ -3,11 +3,10 @@ import React from 'react'
 import './UsersInRoom.css'
 import onlineIcon from '../../Assets/icons/onlineIcon.png'
 
-function UsersInRoom({ users }) {
+function UsersInRoom({ users }, theme) {
     let usersArr = Array.from(users)
     return (
-        <div className="users-room">
-            {console.log(usersArr)}
+        <div className={`users-room users-room-${theme}`}>
             <h2>Users currently in room </h2>
             <div>
                 {usersArr.map(user => (
