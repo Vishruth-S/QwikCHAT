@@ -1,6 +1,12 @@
-.navbar {
+.navbar-light {
     text-align: left;
     background-color: #fff;
+}
+
+.navbar-dark {
+    text-align: left;
+    background-color: #000;
+    color: #fff;
 }
 
 .navbar-brand {
