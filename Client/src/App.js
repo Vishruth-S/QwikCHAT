@@ -6,10 +6,13 @@ import Navbar from './components/Navbar/Navbar';
 import './App.css'
 
 const App = () => {
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState("light");
   return (
     <Router>
-      <button id="mode-toggle" onClick={() => setMode(mode === "dark" ? "light" : "dark")}>Mode</button>
+      <div class="dark-toogle">
+        <input type="checkbox" class="toogle-check" id="dark_mode" onChange={() => setMode(mode === "dark" ? "light" : "dark")} />
+        <label class="dark-label" for="dark_mode"></label>
+      </div>
       <Navbar theme={mode} />
       <Route path="/" exact component={() => <Join theme={mode} />} />
       <Route path="/chat" render={(routeParams) => <Chat routeParams={routeParams} theme={mode} />} />

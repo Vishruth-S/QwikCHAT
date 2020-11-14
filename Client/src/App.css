@@ -1,4 +1,82 @@
 #mode-toggle {
+    /* float: right; */
+    margin-top: 30px;
+}
+
+.dark-toogle {
+    position: absolute;
     float: right;
     margin-top: 30px;
+    margin-right: 40px;
+    /* Devlaring all variables */
+    --unchecked-color: #CCCCCC;
+    --checked-color: #8a40ce;
+    --shadow: 0 6px 12px 0px #757575;
+    --toogle-width: 55px;
+    --circle-size: 30px;
+    position: relative;
+    width: var(--toogle-width);
+    user-select: none;
+}
+
+.toogle-check {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dark-label {
+    display: block;
+    cursor: pointer;
+    height: 20px;
+    padding: 0;
+    line-height: 20px;
+    border-radius: 30px;
+    transition: .5s ease-out;
+}
+
+.dark-label:before {
+    content: "";
+    display: block;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    margin: -5px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-radius: 50%;
+    transition: .5s ease-out;
+    background-size: contain;
+}
+
+.toogle-check:not(:checked)+.dark-label {
+    background-color: var(--unchecked-color);
+}
+
+.toogle-check:not(:checked)+.dark-label:before {
+    right: 30px;
+    background-image: url('https://i.ibb.co/sHfZHb4/sun.webp');
+    box-shadow: var(--shadow);
+}
+
+.toogle-check:checked+.dark-label {
+    background-color: var(--checked-color);
+}
+
+.toogle-check:checked+.dark-label:before {
+    right: 0px;
+    background-image: url('https://i.ibb.co/G5gJtp5/moon.webp');
+    box-shadow: var(--shadow);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #06488a;
+}
+
+.toogle-container {
+    padding: 10% 15%;
+    background-color: #15082d;
 }

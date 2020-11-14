@@ -13,7 +13,7 @@ const Join = (props) => {
             <div className="joinOuterContainer">
                 <div className="welcomeContainer">
                     <h2 className="welcome">Welcome to <span style={{ color: "#a329ff" }}>Qwik</span>Chat</h2>
-                    <p>A simple chat application</p>
+                    <p>An instant one time chat application</p>
                     <img className="welcome-image" src={props.theme === "dark" ? imgdark : imglight} alt="chat"></img>
                 </div>
                 <div className="joinInnerContainer">

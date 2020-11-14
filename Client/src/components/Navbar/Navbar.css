@@ -1,13 +1,12 @@
 .navbar-light {
     text-align: left;
-    background-color: #fff;
+    background-color: #3c3c3c;
     transition: 0.3s;
 }
 
 .navbar-dark {
     text-align: left;
-    background-color: #1a1a1d;
-    color: #fff;
+    background-color: #35333b;
     transition: 0.3s;
 }
 
@@ -21,7 +20,8 @@
 }
 
 .nav-right {
-    float: right;
+    /* float: right; */
+    color: #fff;
     margin: 15px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
