@@ -2,7 +2,7 @@ import React from 'react'
 import ReactEmoji from 'react-emoji'
 import './Message.css'
 
-const Message = ({ message: { user, text }, name }) => {
+const Message = ({ message: { user, text }, name, theme }) => {
     let isSentByCurrentUser = false
     const trimmedName = name.trim().toLowerCase();
     let isAdmin = false
@@ -31,7 +31,7 @@ const Message = ({ message: { user, text }, name }) => {
                     </div>
                     :
                     <div className="messageContainer justifyStart">
-                        <div className="messageBox backgroundLight">
+                        <div className={`messageBox background${theme}`}>
                             <p className="messageText colorDark">{ReactEmoji.emojify(text)}</p>
                         </div>
                         <p className="sentText pl-10">{user}</p>

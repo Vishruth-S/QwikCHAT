@@ -84,8 +84,12 @@
     background: #a329ff;
 }
 
-.backgroundLight {
-    background: #a329ff36
+.backgroundlight {
+    background: #a329ff36;
+}
+
+.backgrounddark {
+    background: #e8c9ff;
 }
 
 .backgroundGrey {

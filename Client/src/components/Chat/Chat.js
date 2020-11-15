@@ -60,7 +60,7 @@ const Chat = (props) => {
             <div className={`outerContainer outerContainer-${props.theme}`}>
                 <div className={`container container-${props.theme}`}>
                     <Infobar room={room} />
-                    <Messages messages={messages} name={name} />
+                    <Messages messages={messages} name={name} theme={props.theme} />
                     <Input message={message} setMessage={setMessage} sendMessage={sendMessage} theme={props.theme} />
                 </div>
                 <UsersInRoom users={users} theme={props.theme} />
