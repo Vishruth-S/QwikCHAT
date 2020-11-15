@@ -1,6 +1,7 @@
 const express = require('express')
 const socketio = require('socket.io', { wsEngine: 'ws' })
 const http = require('http')
+const cors = require('cors')
 
 const { addUser, removeUser, getUser, getUsers } = require('./users')
 
@@ -52,6 +53,7 @@ io.on('connection', (socket) => {
 })
 
 app.use(router)
+app.use(cors())
 
 server.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`)
