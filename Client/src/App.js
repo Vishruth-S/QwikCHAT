@@ -9,9 +9,9 @@ const App = () => {
   const [mode, setMode] = useState("light");
   return (
     <Router>
-      <div class="dark-toogle">
-        <input type="checkbox" class="toogle-check" id="dark_mode" onChange={() => setMode(mode === "dark" ? "light" : "dark")} />
-        <label class="dark-label" for="dark_mode"></label>
+      <div className="dark-toogle">
+        <input type="checkbox" className="toogle-check" id="dark_mode" onChange={() => setMode(mode === "dark" ? "light" : "dark")} />
+        <label className="dark-label" for="dark_mode"></label>
       </div>
       <Navbar theme={mode} />
       <Route path="/" exact component={() => <Join theme={mode} />} />
