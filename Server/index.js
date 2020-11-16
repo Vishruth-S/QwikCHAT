@@ -1,6 +1,6 @@
 const express = require('express')
-const socketio = require('socket.io', { wsEngine: 'ws' })
 const http = require('http')
+const socketio = require('socket.io')
 const cors = require('cors')
 
 const { addUser, removeUser, getUser, getUsers } = require('./users')
@@ -11,7 +11,7 @@ const router = require('./router')
 
 const app = express()
 const server = http.createServer(app)
-const io = socketio(server)
+const io = socketio(server, { wsEngine: 'ws' })
 
 io.on('connection', (socket) => {
     // console.log('We have a new connection!')
