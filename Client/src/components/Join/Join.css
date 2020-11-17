@@ -85,12 +85,24 @@ button {
     margin-top: 20px;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 500px) {
     .joinOuterContainer {
         height: 100%;
+        flex-direction: column;
+        padding-bottom: 20px;
     }
     .joinInnerContainer {
         width: 90%;
+    }
+    .welcomeContainer {
+        margin-top: 0px;
+    }
+    .welcome {
+        padding-top: 10px;
+        margin: 10px;
+    }
+    .welcome-image {
+        width: 250px;
     }
 }
 

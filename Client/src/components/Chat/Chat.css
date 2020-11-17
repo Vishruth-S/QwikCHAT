@@ -43,7 +43,7 @@
     background-color: #bcbaba;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 500px) {
     .outerContainer {
         height: 100%;
         flex-direction: column;

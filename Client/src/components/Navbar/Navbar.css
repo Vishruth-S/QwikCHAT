@@ -15,7 +15,7 @@
 }
 
 .nav-logo {
-    width: 80px;
+    width: 75px;
     margin: 10px;
 }
 
@@ -26,8 +26,22 @@
     /* margin-top: 30px; */
 }
 
+.vs {
+    font-size: 12px;
+    margin-left: 65px;
+    color: #d0d0d0
+}
+
+.vs>a {
+    color: #cb85ff
+}
+
 @media (max-width: 500px) {
     .navbar-brand {
         margin-left: 20px;
+    }
+    .vs {
+        margin-left: 40px;
+        font-size: 11px;
     }
 }
