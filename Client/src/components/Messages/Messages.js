@@ -13,7 +13,7 @@ const ROOT_CSS = css({
 });
 
 const Messages = ({ messages, name, theme }) => {
-    console.log(theme)
+
     return (
         <ScrollToBottom className={ROOT_CSS}>
             {messages.map((message, i) => <div key={i}><Message message={message} name={name} theme={theme} /></div>)}
