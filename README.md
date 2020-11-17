@@ -1,4 +1,4 @@
-# QwikChat
+# QwikCHAT
 
 An instant one time chat application.
 Built using NodeJS, Socketio and React.
