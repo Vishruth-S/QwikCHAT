@@ -18,10 +18,7 @@ io.on('connection', (socket) => {
     socket.on('join', ({ name, room }, callback) => {
         const user = addUser({ id: socket.id, name: name, room: room });
         if (user.error) return callback(user.error)
-        socket.join(user.room)
 
-        socket.emit('message', { user: 'admin', text: `${user.name}, welcome to the room` })
-        socket.broadcast.to(room).emit('message', { user: 'admin', text: `${user.name} has joined  ` })
 
         const users = getUsers()
         const usersInRoom = getUsersInRoom(users, user.room)
